@@ -2,11 +2,25 @@
 
 namespace myApp
 {
+  public class Person
+  {
+    public string FirstName;
+    public string LastName;
+
+    public void Introduce()
+    {
+      Console.WriteLine("My name is " + FirstName + " " + LastName);
+    }
+
+  }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("the current time is " + DateTime.Now);
+            Person john = new Person();
+            john.FirstName = "John";
+            john.LastName = "Smith";
+            john.Introduce();
         }
     }
 }
