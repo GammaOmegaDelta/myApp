@@ -1,26 +1,26 @@
 ﻿using System;
 
-namespace myApp
+namespace CSharpFundamentals
 {
-  public class Person
-  {
-    public string FirstName;
-    public string LastName;
-
-    public void Introduce()
-    {
-      Console.WriteLine("My name is " + FirstName + " " + LastName);
-    }
-
-  }
     class Program
     {
         static void Main(string[] args)
         {
-            Person john = new Person();
-            john.FirstName = "John";
-            john.LastName = "Smith";
-            john.Introduce();
+            var numbers = new int[3];
+            numbers[0] = 1;
+
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[1]);
+
+            var flags = new bool[3];
+            flags[0] = true;
+
+            Console.WriteLine(flags[0]);
+            Console.WriteLine(flags[1]);
+            Console.WriteLine(flags[2]);
+
+            var names = new string[3] { "Jack", "John", "Mary" };
         }
     }
 }
