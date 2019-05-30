@@ -2,29 +2,27 @@
 
 namespace CSharpFundamentals
 {
+  public enum ShippingMethod
+  {
+    RegularAirMail = 1,
+    RegisteredAirMail = 2,
+    Express = 3
+  }
     class Program
     {
         static void Main(string[] args)
         {
-            var firstName = "Adrian";
-            var lastName = "Fernandez";
+          var method = ShippingMethod.Express;
+          Console.WriteLine((int)method);
 
-            var fullName = firstName + " " + lastName;
+          var methodId = 3;
+          Console.WriteLine((ShippingMethod)methodId);
 
-            Console.WriteLine(fullName);
+          Console.WriteLine(method.ToString());
 
-            var myFullName = string.Format("My name is {0}, {1}", firstName, lastName);
+          var methodName = "Express";
+          var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
 
-            var names = new string[3] { "John", "Jack", "Mary" };
-            var formattedNames = string.Join(",", names);
-
-            Console.WriteLine(formattedNames);
-
-            var text = @"Hi John
-            Look inot the following paths
-            c:\foler1\folder2
-            c:folder3\foler4";
-            Console.WriteLine(text);
         }
     }
 }
