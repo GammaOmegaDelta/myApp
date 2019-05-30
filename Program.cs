@@ -11,6 +11,8 @@ namespace CSharpFundamentals
 
             var fullName = firstName + " " + lastName;
 
+            Console.WriteLine(fullName);
+
             var myFullName = string.Format("My name is {0}, {1}", firstName, lastName);
 
             var names = new string[3] { "John", "Jack", "Mary" };
