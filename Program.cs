@@ -2,22 +2,25 @@
 
 namespace CSharpFundamentals
 {
+
     class Program
     {
 
         static void Main(string[] args)
         {
-            bool isGoldCustomer = true;
+            var season = Season.Autumn;
 
-            //float price;
-            //if (isGoldCustomer)
-            //    price = 19.95f;
-            //else
-                //price = 29.95f;
+            switch (season)
+            {
+                case Season.Autumn:
+                case Season.Summer:
+                    Console.WriteLine("We have a promotion going on!");
+                    break;
 
-            float price = (isGoldCustomer) ? 19.95f : 29.95f;
-
-            Console.WriteLine(price);
+                default:
+                    Console.WriteLine("I don't understand what season it is.");
+                    break;
+            }
         }
     }
 }
