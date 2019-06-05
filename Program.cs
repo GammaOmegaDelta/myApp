@@ -8,18 +8,19 @@ namespace CSharpFundamentals
 
         static void Main(string[] args)
         {
-            var season = Season.Autumn;
-
-            switch (season)
-            {
-                case Season.Autumn:
-                case Season.Summer:
-                    Console.WriteLine("We have a promotion going on!");
-                    break;
-
-                default:
-                    Console.WriteLine("I don't understand what season it is.");
-                    break;
+           for (var i = 1; i <= 10; i++)
+            { 
+                if (i%2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+           for (var i = 10; i >= 1; i--)
+            { 
+                if (i%2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
         }
     }
