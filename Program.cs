@@ -8,33 +8,17 @@ namespace CSharpFundamentals
 
         static void Main(string[] args)
         {
-            //for (var i =1; 1 <= 10, i++)
-            //{ 
-            //    if (i%2 ==0)
-            //        Console.WriteLine(i);
-            //}
-            //var i = 0;
-            //while (i <= 10)
-            //{ 
-            //    if (i %2 ==0)
-            //        Console.WriteLine(i);
+            var random = new Random();
 
-            //    i++;
-            //}
-            { 
-                while (true)
-                {
-                    Console.Write("Type your name: ");
-                    var input = Console.ReadLine();
+            const int passwordLength = 10;
 
-                    if (!String.IsNullOrWhiteSpace(input))
-                    {
-                        Console.WriteLine("@Echo: " + input);
-                        continue;
-                    }
-                    break;
-                }
-            }
+            var buffer = new char[passwordLength];
+            for (var i = 0; i < passwordLength; i++)
+                buffer[i] = (char)('a' + random.Next(0, 26));
+
+            var password = new string(buffer);
+
+            Console.WriteLine(password);
         }
     }
 }
