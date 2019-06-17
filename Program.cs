@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace CSharpFundamentals
 {
@@ -8,29 +8,22 @@ namespace CSharpFundamentals
 
         static void Main(string[] args)
         {
-            var numbers = new List<int>() { 1, 2, 3, 4 };
-            numbers.Add(1);
-            numbers.AddRange(new int[3] { 5, 6, 7 });
+            var dateTime = new DateTime(2019, 6, 17);
+            var now = DateTime.Now;
+            var today = DateTime.Today;
 
-            foreach (var number in numbers)
-                System.Console.WriteLine(number);
+            //Console.WriteLine("Hour: " + now.Hour);
+            //Console.WriteLine("Minute: " + now.Minute);
 
-            System.Console.WriteLine();
-            System.Console.WriteLine("Index of 1: " + numbers.IndexOf(1));
-            System.Console.WriteLine("Last Index of 1: " + numbers.LastIndexOf(1));
+            var tomorrow = now.AddDays(1);
+            var yesterday = now.AddDays(-1);
 
-            System.Console.WriteLine("Count: " + numbers.Count);
+            Console.WriteLine(now.ToLongDateString());
+            Console.WriteLine(now.ToShortDateString());
+            Console.WriteLine(now.ToLongTimeString());
+            Console.WriteLine(now.ToShortTimeString());
+            Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm"));
 
-            for (var i = 0; i < numbers.Count; i++)
-            {
-                if (numbers[i] == 1)
-                    numbers.Remove(numbers[i]);
-            }
-            foreach (var number in numbers)
-                System.Console.WriteLine(number);
-
-            numbers.Clear();
-            System.Console.WriteLine("Count: " + numbers.Count);
         }
     }
 }
